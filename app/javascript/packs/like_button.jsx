@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import FontAwesome from 'react-fontawesome'
-import 'font-awesome/scss/font-awesome';
+import faStyles from 'font-awesome/css/font-awesome.css';
 
 class LikeButton extends React.Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class LikeButton extends React.Component {
   render() {
     return (
       <button onClick={() => {this.setState({likes: this.state.likes +1})}}>
-       <FontAwesome name="thumbs-up" /> {this.state.likes}
+       <FontAwesome name="thumbs-up" cssModule={faStyles} /> {this.state.likes}
       </button>
     );
   }
