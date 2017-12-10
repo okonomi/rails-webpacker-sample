@@ -20,9 +20,9 @@ class LikeButton extends React.Component {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    <LikeButton name="React" />,
-    document.getElementById('like-button')
-  )
+document.addEventListener('turbolinks:load', () => {
+  const elem = document.getElementById('like-button');
+  if (elem) {
+    ReactDOM.render(<LikeButton />, elem)
+  }
 })
