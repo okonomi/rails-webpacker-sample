@@ -50,7 +50,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   gem 'capistrano'
-  gem 'capistrano-scm-copy'
+  gem 'capistrano-git-copy', require: false
   gem 'capistrano-rails'
 end
 
