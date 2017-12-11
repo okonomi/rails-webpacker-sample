@@ -51,7 +51,7 @@ group :development do
 
   gem 'capistrano'
   gem 'capistrano-bundler'
-  gem 'capistrano-console'
+  gem 'capistrano-console', require: false
   gem 'capistrano-git-copy', require: false
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
