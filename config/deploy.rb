@@ -3,7 +3,6 @@ lock "~> 3.10.1"
 
 set :application, "webpacker-sample"
 set :repo_url, "."
-set :branch, "capistrano"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
