@@ -1,9 +1,8 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import FontAwesome from 'react-fontawesome'
 import faStyles from 'font-awesome/scss/font-awesome.scss';
 
-class LikeButton extends React.Component {
+export default class LikeButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,10 +18,3 @@ class LikeButton extends React.Component {
     );
   }
 }
-
-document.addEventListener('turbolinks:load', () => {
-  const elem = document.getElementById('like-button');
-  if (elem) {
-    ReactDOM.render(<LikeButton />, elem)
-  }
-})
