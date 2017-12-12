@@ -1,14 +1,12 @@
 const { environment } = require('@rails/webpacker')
-const merge = require('webpack-merge')
 
-const myCssLoaderOptions = {
+// Enable css modules with sass loader
+const sassLoader = environment.loaders.get('sass')
+const cssLoader = sassLoader.use.find(loader => loader.loader === 'css-loader')
+
+cssLoader.options = Object.assign(cssLoader.options, {
   modules: true,
-  sourceMap: true,
-  localIdentName: '[name]__[local]___[hash:base64:5]'
-}
-
-const CSSLoader = environment.loaders.get('css').use.find(el => el.loader === 'css-loader')
-
-CSSLoader.options = merge(CSSLoader.options, myCssLoaderOptions)
+  localIdentName: '[path][name]__[local]--[hash:base64:5]'
+})
 
 module.exports = environment

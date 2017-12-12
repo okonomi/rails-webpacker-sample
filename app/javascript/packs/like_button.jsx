@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import FontAwesome from 'react-fontawesome'
-import faStyles from 'font-awesome/css/font-awesome.css';
+import faStyles from 'font-awesome/scss/font-awesome.scss';
 
 class LikeButton extends React.Component {
   constructor(props) {
