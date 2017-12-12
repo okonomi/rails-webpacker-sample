@@ -7,7 +7,7 @@ const myCssLoaderOptions = {
   localIdentName: '[name]__[local]___[hash:base64:5]'
 }
 
-const CSSLoader = environment.loaders.get('style').use.find(el => el.loader === 'css-loader')
+const CSSLoader = environment.loaders.get('css').use.find(el => el.loader === 'css-loader')
 
 CSSLoader.options = merge(CSSLoader.options, myCssLoaderOptions)
 
