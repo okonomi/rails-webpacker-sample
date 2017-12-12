@@ -51,7 +51,7 @@ server "127.0.0.1",
   user: "vagrant",
   ssh_options: {
     user: "vagrant", # overrides user setting above
-    keys: `vagrant global-status | grep webpacker-deploy | awk -F' +' '{print $5}'`.chomp + '/.vagrant/machines/default/virtualbox/private_key',
+    keys: '.vagrant/machines/default/virtualbox/private_key',
     forward_agent: false,
     port: 2222,
     auth_methods: %w(publickey password)
